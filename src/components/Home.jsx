@@ -19,7 +19,7 @@ function Home() {
 
     return (
         <>
-            <div className='grid grid-cols-1 lg:grid-cols-5  gap-10 px-4 mx-auto   text-white  py-5   lg:container  justify-between'>
+            <div className='grid grid-cols-1  sm:grid-cols-3 lg:grid-cols-5  gap-10 px-4 mx-auto   text-white  py-5   lg:container  justify-between'>
                 {user.length != 0 ? user.map((item, idx) => (
                     <div key={idx} className='h-52 w-full hover:scale-105 duration-500 transition-all ease-in-out'>
                         <a target='_blank' href={item.url}>
@@ -27,7 +27,7 @@ function Home() {
                             <h1 className='text-lg font-medium w-full'>{item.author}</h1>
                         </a>
                     </div>
-                )) : <div className='h-[72vh]'><h1 className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-5xl font-medium text-gray-300'>Lodding...</h1></div>}
+                )) : <div className='lg:h-[72vh] 2xl:h-[46vh]'><h1 className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-5xl font-medium text-gray-300'>Lodding...</h1></div>}
 
 
             </div>
