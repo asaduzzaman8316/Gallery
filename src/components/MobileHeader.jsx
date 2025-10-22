@@ -18,7 +18,7 @@ function MobileHeader(propse) {
                 </button>
             </div>
             <div className={propse.isClick ? 'hidden' : 'block'}>
-                <div className={`absolute z-10 top-10  right-4 rounded-md font-semibold bg-white/5 backdrop-blur-lg   flex flex-col w-[50%] px-10 py-15 text-2xl  gap-8`}>
+                <div className={`absolute z-50 top-10  right-4 rounded-md font-semibold bg-white/5 backdrop-blur-lg   flex flex-col w-[50%] px-10 py-15 text-2xl  gap-8`}>
                     <Link
                         onClick={() => propse.setIsClick(true)}
                         className='bg-white/10 px-2 py-1 rounded-md backdrop-blur-2xl' to='/'>
