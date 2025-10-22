@@ -1,5 +1,4 @@
 
-import Header from './Header'
 import React, { useEffect, useState } from 'react'
 import Navegate from './Navegate';
 
@@ -20,7 +19,6 @@ function Home() {
 
     return (
         <>
-            <Header setIndex={setIndex} setUser={setUser} />
             <div className='grid grid-cols-1 lg:grid-cols-5  gap-10 px-4 mx-auto overflow-auto  pb-5 h-[82vh]  text-black lg:container  justify-between'>
                 {user.length != 0 ? user.map((item, idx) => (
                     <div key={idx} className='h-52 w-full'>
