@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+
 import { Link } from 'react-router-dom'
 import MobileHeader from './MobileHeader';
 
-function Header() {
+function Header(props) {
 
-    const [isClick, setIsClick] = useState(true);
+    
 
     return (
         <div className='bg-[#101828] text-white py-3 flex  px-4 sticky top-0'>
@@ -31,7 +31,7 @@ function Header() {
                     </div>
                 </div>
             </div>
-            <MobileHeader isClick={isClick} setIsClick={setIsClick} />
+            <MobileHeader isClick={props.isClick} setIsClick={props.setIsClick} />
         </div>
     )
 }

@@ -40,7 +40,7 @@ const Footer = () => {
                                             </g>
                                         </svg>
                                     </span>
-                                    <span>+88016 1083</span>
+                                    <span>+88016 1083 9202</span>
                                 </p>
                             </div>
                         </div>

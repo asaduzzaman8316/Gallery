@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import Navegate from './Navegate';
 
-function Home() {
+function Home(props) {
     const [user, setUser] = useState([])
     const [index, setIndex] = useState(1);
     const [limite, setLimite] = useState(10);
@@ -16,10 +16,16 @@ function Home() {
         getData()
     }, [index, limite]) //call only one time
 
+    function handleScroll() {
+        props.setIsClick(true)
+    }
+    window.addEventListener("scroll", handleScroll);
+
 
     return (
         <>
-            <div className='grid grid-cols-1  sm:grid-cols-3 lg:grid-cols-5  gap-10 px-4 mx-auto   text-white  py-5   lg:container  justify-between'>
+            <div
+                className='grid grid-cols-1  sm:grid-cols-3 lg:grid-cols-5  gap-10 px-4 mx-auto   text-white  py-5   lg:container  justify-between'>
                 {user.length != 0 ? user.map((item, idx) => (
                     <div key={idx} className='h-52 w-full hover:scale-105 duration-500 transition-all ease-in-out'>
                         <a target='_blank' href={item.url}>
