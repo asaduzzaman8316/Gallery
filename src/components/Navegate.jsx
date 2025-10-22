@@ -2,8 +2,8 @@ import React from 'react'
 
 function Navegate(props) {
     return (
-        <div className='flex justify-center gap-5 items-center  w-full'>
-            <button className='px-8 py-1  cursor-pointer bg-red-500  rounded-lg text-white text-sm font-medium'
+        <div className='flex justify-center gap-5 items-center  w-full text-white py-5'>
+            <button className='px-8 py-1 active:scale-90  cursor-pointer bg-red-500  rounded-lg text-white text-sm font-medium'
                 onClick={() => {
                     props.index != 1 && props.setIndex(props.index - 1)
                     props.setUser([])
@@ -13,7 +13,7 @@ function Navegate(props) {
                 Prev
             </button>
             <h1 className='text-lg font-bold'>Page-{props.index}</h1>
-            <button className='px-8 py-1  cursor-pointer bg-red-500  rounded-lg text-white text-sm font-medium'
+            <button className='px-8 py-1 active:scale-90  cursor-pointer bg-green-500  rounded-lg text-white text-sm font-medium'
                 onClick={() => {
                     props.setIndex(props.index + 1)
                     props.setUser([])

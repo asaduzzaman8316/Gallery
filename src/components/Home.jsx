@@ -19,19 +19,19 @@ function Home() {
 
     return (
         <>
-            <div className='grid grid-cols-1 lg:grid-cols-5  gap-10 px-4 mx-auto overflow-auto  pb-5 h-[82vh]  text-black lg:container  justify-between'>
+            <div className='grid grid-cols-1 lg:grid-cols-5  gap-10 px-4 mx-auto   text-white  py-5   lg:container  justify-between'>
                 {user.length != 0 ? user.map((item, idx) => (
-                    <div key={idx} className='h-52 w-full'>
+                    <div key={idx} className='h-52 w-full hover:scale-105 duration-500 transition-all ease-in-out'>
                         <a target='_blank' href={item.url}>
                             <img className='w-full h-full object-cover rounded-md' src={item.download_url} alt="" />
                             <h1 className='text-lg font-medium w-full'>{item.author}</h1>
                         </a>
                     </div>
-                )) : <h1 className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-5xl font-medium text-gray-900'>Lodding...</h1>}
+                )) : <div className='h-[72vh]'><h1 className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-5xl font-medium text-gray-300'>Lodding...</h1></div>}
 
 
             </div>
-            <div className='w-full flex justify-center py-3 flex-col items-center -translate-y-4 gap-3'>
+            <div className='w-full flex justify-center pt-5  flex-col items-center gap-3'>
                 <i className={`fas fa-angle-${limite == 40 ? 'up' : 'down'} text-lg font-semibold cursor-pointer active:scale-90 bg-gray-900 text-white rounded-md`}
                     onClick={() => limite != 40 ? setLimite(limite + 10) : setLimite(limite - 30)}
                 >
